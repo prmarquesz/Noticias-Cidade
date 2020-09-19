@@ -1,0 +1,262 @@
+/* Estrutura do site
+*/
+*{
+	margin: 0;/*Remove a formatação padrão.*/
+	padding: 0;
+}
+
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #fff url(../imagens/fundo.png) repeat-x;/*Cor branca e imagem de fundo repetindo na horizontal.*/
+}
+
+#container {/*Bloco principal.*/
+	width: 750px;/*Largura fixa.*/
+	margin: 0 auto;/*Centralizando o bloco.*/
+	/*border: 1px solid red;*/
+}	
+
+/*TOPO INÍCIO*/
+#topo{
+	height: 150px;/*Largura do cabeçalho.*/
+	background: url(../imagens/detalhe-topo.png) no-repeat right top;/*Imagem do brasil a direita no topo.*/
+	padding: 25px;/*Espaçamento interno.*/
+	/*border: 1px solid yellow;*/
+}
+
+.logo{/*Logo do notícias cidade.*/
+	width: 152px;/*Largura da imagem do logo.*/
+	height: 66px;/*Altura da imagem do logo.*/
+	background: url(../imagens/logo.png) no-repeat center;/*Imagem de logo não repetindo a centralizado.*/
+	text-indent: -3000px;/*Por acessibilidade h1 some, porem é lido por narrador de páginas. se o logo não aparexer, o h1 aparecerá.*/
+}
+
+/* Barra de navegação
+*/
+a:link, a:visited{
+	color: #b10333;
+}
+
+a:hover{
+	color: #e50040;
+}
+
+ul{ /* Formata todas as listas do Site */ 
+	margin: 0;
+	padding: 0;
+	list-style: none; /*Remove bolinhas de tópicos da lista*/ 
+}
+
+#topo ul{ /* Formata todas as listas de Topo */
+	margin: 30px;
+	background: #b10333;
+	float: left; /* volta a add o background no fluxo flutuante */
+}
+
+#topo ul li{
+	float: left; /*Flutuando a esquerda, fluxo padrão quebrado add 'float: left' em '#topo ul'*/
+}
+
+#topo ul a{
+	font-size: 0.9em;
+	display: block;
+	padding: 0.5em 1.0em; /*espaçamento interno cima/baixo -- direita/esquerda */
+	line-height: 2.1em; /*Altura da linha*/
+	text-decoration: none; /* retira os underline dos links*/
+	color: #fff;
+	background: url(../imagens/divisor.png) no-repeat left center; /* divisor que separa os elmentos da lista */ 
+}
+
+#topo ul .primeiro a{
+	background: none; /* Tira o divisor do primeiro item da lista */
+}
+
+#topo ul a:hover {
+	color: #69001d; /* add um efeito quando passado o mouse */
+}
+
+body.home #navegacao a#home,
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.ciencia #navegacao a#ciencia,
+body.saude #navegacao a#saude,
+body.fotos #navegacao a#fotos
+{
+	color: #fff;
+	background: #de003e;
+	cursor: text; /* muda o cursor de maozinha do link, para texto */
+}
+/*TOPO FIM*/
+
+
+
+
+
+/* Configura layout de três colunas -- container conteudo
+*/
+#conteudo{
+	margin-top: 60px;
+	background: #f5f5f5;
+}
+
+#primario{ /* container primário*/
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 195px;
+	
+}
+
+#duas-colunas #primario{ /* container primário com duas colunas*/
+	width: 555px;
+}
+
+#uma-coluna #primario{
+	width: 750px;
+	margin: 0 0 20px 0; /* container primário com uma coluna*/
+}
+
+#secundario{
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 15px;
+	 /* container secundário*/
+}
+
+#lateral{ /* container lateral*/
+	width: 180px;
+	float: left;
+	margin: 0 0 20px -750px;
+	/*background: yellow;*/
+}
+
+.caixa{ /* Caixa dentro do container lateral */
+	margin: 10px 0;
+	padding: 5px;
+	background: #f3f3f3 url(../imagens/fundo-caixa.png);
+}
+
+h2{ /* formatação do 'h2' */
+	font-size: 1em;
+	background: #294c71;
+	color: #fff;
+	padding: 5px;
+
+}
+
+.caixa-conteudo{ /* caixa de conteúdos dentro da caixa da caixa do container lateral*/
+	background: #fff;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+/* Formatar Menus laterais
+*/
+#lateral ul a{
+	font-size: 0.9em;
+	padding: 3px;
+	display: block;
+	line-height: 30px;
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover{
+	background: #f9f9f9 url(../imagens/marcador.png) no-repeat left center;
+	padding-left: 20px; 
+	color: #a1a1a1;
+}
+
+label{
+	display: block;
+	cursor: pointer;
+}
+
+input{
+	padding: 5px;
+	width: 125px;
+	font-size: 0.9em;
+	background-color: #fff;
+}
+
+input.submit{
+	width: 80px;
+	color: #fff;
+	background-color: #b10333;
+	border: 2px solid #870529;
+}
+
+
+/* Formatando Coluna primária
+*/
+imp.imagem-principal{
+	width: 98%;
+	border: 3px solid #dfdfdf;
+
+}
+
+h3{
+	text-transform: uppercase;
+	display: inline;
+	font-size: 0.8em;
+	padding: 3px;
+}
+
+.destaque h3{
+	background: #b10333;
+	color: #fff;
+}
+
+/* Secundário
+*/
+.entrevista h3{
+	background: #de003e;
+}
+
+
+
+
+/* Formatando a Lista de notícias
+*/
+#lista-noticias li{
+	padding: 2px;
+	border-bottom: 1px solid #ccc;
+	height: 62px;
+}
+
+#lista-noticias li a img{
+	float: left;
+	margin: 5px;
+}
+
+#lista-noticias li a{
+	text-decoration: none;
+}
+
+#lista-noticias li a h3{
+	font-size: 0.8em;
+	padding: 0;
+	color: #3e7ab9;
+}
+
+#lista-noticias li a p{
+	font-size: 0.7em;
+	color: #000;
+}
+
+#lista-noticias li:hover{
+	background: #eee;
+	cursor: pointer;
+}
+
+
+
+
+
+/* Rodape
+*/
+#container-rodape{
+	background: #294c71;
+	padding: 20px;
+}
